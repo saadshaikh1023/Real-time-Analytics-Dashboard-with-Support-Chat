@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Real-time Analytics Dashboard with Support Chat
+
+## Overview
+
+This project is a real-time analytics dashboard with an integrated support chat feature. It's built using Next.js 14, TypeScript, and Tailwind CSS, showcasing real-time data visualization, user activity tracking, and a responsive chat interface.
+
+## Features
+
+- Real-time analytics dashboard
+- Interactive charts and metrics
+- Live user counter and activity feed
+- Dark/Light mode toggle
+- Authenticated user access
+- Support chat with proactive messaging
+- Responsive design for mobile and desktop
+
+## Prerequisites
+
+- Node.js (v14 or later)
+- npm or yarn
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/Real-time-Analytics-Dashboard-with-Support-Chat.git
+   cd analytics-dashboard
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory and add the following:
+   ```
+   NEXTAUTH_SECRET=your_nextauth_secret
+   NEXTAUTH_URL=http://localhost:3000
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `/src/app`: Next.js 14 app directory
+- `/src/components`: React components
+- `/src/lib`: Utility functions and mock socket
+- `/public`: Static assets
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Key Components
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Dashboard (`/src/app/dashboard/page.tsx`)
+- Support Chat (`/src/app/support/page.tsx`)
+- ChatInterface (`/src/components/ChatInterface.tsx`)
+- ActivityFeed (`/src/components/ActivityFeed.tsx`)
+- UserSimulator (`/src/components/UserSimulator.tsx`)
 
-## Deploy on Vercel
+## Authentication
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project uses NextAuth.js for authentication. The sign-in page is located at `/src/app/page.tsx`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Customization
+
+- Modify the mock data in `/src/lib/mockSocket.ts` to change the simulated real-time data.
+- Adjust the UI components in the `/src/components/ui` directory to match your design preferences.
+- Customize the color scheme by modifying the Tailwind configuration in `tailwind.config.js`.
+
+
