@@ -75,4 +75,6 @@ This project uses NextAuth.js for authentication. The sign-in page is located at
 - Adjust the UI components in the `/src/components/ui` directory to match your design preferences.
 - Customize the color scheme by modifying the Tailwind configuration in `tailwind.config.js`.
 
+# Demo
 
+https://www.loom.com/share/25a1a57b79df4917a904c5cc91f72594?sid=eae16f09-1b2b-49c8-80f1-bb3b12cd3615
